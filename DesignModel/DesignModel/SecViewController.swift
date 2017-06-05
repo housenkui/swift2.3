@@ -10,9 +10,9 @@ import UIKit
 
 //创建一个协议，并附带一个方法
 
-protocol SubViewControllerDelegate {
+@objc protocol SubViewControllerDelegate {
     
-     func back(str:String) ->Void
+   optional  func back(str:String) ->Void
 }
 
 class SecViewController: UIViewController {
@@ -20,12 +20,12 @@ class SecViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     
     //设置代理属性
-     var delegate:SubViewControllerDelegate!
+     var delegate:SubViewControllerDelegate?
     
     /*
       var delegate:SubViewControllerDelegate! 参数不能为空，对应OC中的nonnull
      
-     var delegate:SubViewControllerDelegate？ 参数可以为空，对应OC中的nullable
+      var delegate:SubViewControllerDelegate？ 参数可以为空，对应OC中的nullable
 
      
      */
@@ -34,7 +34,7 @@ class SecViewController: UIViewController {
     @IBAction func backBtnTap(sender: AnyObject) {
         
         //执行代理方法，将值回传
-        delegate?.back(textView.text ?? "")
+        delegate?.back?(textView.text ?? "")
         
         /*
          

@@ -25,11 +25,15 @@ class SubViewController: UIViewController {
     
     @IBAction func backBtnAct(sender: AnyObject) {
         
-        if self.backClosure != nil {
+        if  self.backClosure != nil {
         
-            if let tempString  = self.textField.text {
+            if let tempString  = self.textField.text{
                 
                 self.backClosure!(tempString)
+                
+                if tempString.isEmpty {
+                    print("空字符串")
+                }
             }
         }
         
@@ -47,7 +51,7 @@ class SubViewController: UIViewController {
         
         let Add:AddBlock = {
             
-            (c,d) in
+            (c:Int,d:Int) ->Int in
             return c + d
             
         }

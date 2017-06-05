@@ -34,8 +34,6 @@ class SKPerson {
     }
     init(name:String) {
         self.name      = name
-        
-
     }
     
     //定义一个convenience修饰的初始化方法，如果在同一个类中必须调用其他没有convenience修饰的初始化方法
@@ -281,6 +279,7 @@ class ViewController: UIViewController {
         
         man = Man01.init(name: "hsk", age: 26, weight: 130.0)
         
+        //man?,中的?代表man是否存在
         man?.study()
         
         let dispatchTime = DispatchTime.now() + 2.0

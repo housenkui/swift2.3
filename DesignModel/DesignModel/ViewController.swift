@@ -118,6 +118,8 @@ class ViewController: UIViewController{
         
         self.navigationController?.pushViewController(secVC, animated: true)
         
+        //self.navigationController?，这句话的含义是，如果有navigationController,才去执行，没有就不执行
+        
     }
     
     override func didReceiveMemoryWarning() {
