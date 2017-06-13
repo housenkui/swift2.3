@@ -104,14 +104,65 @@ let obj1:String = array10[1]
 let obj2:String? = array10.first
 
 //获取数组的最后一个元素
+
 let obj3:String? = array10.last
 
 //获取数组指定范围内的元素
 
+//数组的遍历
+/*
+ 使用 for...in 循环遍历
+ */
+//Array或NSArray
+let arr:NSArray = ["bei","jing","huan","ying","ni"]
+
+//tmp无需定义
+for temp in arr {
+    
+    print("\(temp)")
+}
+//用闭包循环遍历
+arr.enumerateObjectsUsingBlock { (obj:AnyObject, idx:Int, stop:UnsafeMutablePointer<ObjCBool>) in
+    
+    print("闭包\(obj)")
+    
+    if obj.isEqual("huan") {
+        //停止继续遍历
+        stop.initialize(true)
+    }
+}
+
+//用迭代器遍历
+let enu1:NSEnumerator = arr.objectEnumerator()
+
+//反序遍历
+let enu2:NSEnumerator = arr.reverseObjectEnumerator()
+
+//AnyObject后不要加?,否则会导致一直循环
+while let obj:AnyObject = enu1.nextObject() {
+    
+    print("用迭代器\(obj)")
+}
 
 
+//条件遍历
 
+//1.indexesOfObjectsPassingTest 找出数组中所有满足条件的值
+let indexSet:NSIndexSet = arr.indexesOfObjectsPassingTest { (obj:AnyObject, idx:Int, stop:UnsafeMutablePointer<ObjCBool>) -> Bool in
+    //条件满足时返回满足的数组元素的下标
+    return obj.isEqual("huan") ? true : false
+}
+indexSet.enumerateIndexesUsingBlock { (idx:Int, stop:UnsafeMutablePointer<ObjCBool>) in
+    
+    print(idx)
+}
 
+//2.indexOfObjectPassingTest找出数组中第一个满足条件的值
+let index:Int  = arr.indexOfObjectPassingTest { (obj:AnyObject, idx:Int, stop:UnsafeMutablePointer<ObjCBool>) -> Bool in
+    //条件满足时返回满足的数组元素的下标
+    return obj.isEqual("huan") ? true : false
+}
+print(index)
 
 
 

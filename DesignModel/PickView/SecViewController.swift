@@ -10,16 +10,13 @@ import UIKit
 
 class SecViewController: UIViewController ,ChinessSubDivPickerDeleagte{
 
-    
     lazy var chineseSubDivPickerView:ChinessSubDivPicker = {
-    
         var temp = ChinessSubDivPicker.init(frame:CGRectMake(0, 100, 375, 400))
 //        temp.frame = CGRectMake(0, 100, 375, 400)
-        temp.backgroundColor  = UIColor.redColor()
+        temp.backgroundColor  = UIColor.clearColor()
         temp.pickerDelegate = self
-        temp.pickerType  = .City
+        temp.pickerType  = .Province
         return temp
-    
     }()
     
     override func viewDidLoad() {

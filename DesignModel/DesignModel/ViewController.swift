@@ -24,7 +24,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var textView: UITextView!
     
     //1.分析NSArray 是一个闭包的返回值，而这是一个没有参数的闭包
-    lazy var dataArray:NSMutableArray  = {[]}()
+    lazy var dataArray:NSMutableArray  =  { return NSMutableArray() }()
     
     //2.也可以写成这样
     lazy var dataArray01:NSArray  = {return NSArray()}()
@@ -38,10 +38,7 @@ class ViewController: UIViewController{
     }()
     /*
      上述的代码，有点难理解，如果之前会Objective-C的block 或者对C语言的函数指针理解透彻的，可以看成是一个代码块，然后self.dataArray的时候，就执行了代码块，但是重复调用，Lazy 属性的代码块只会调用一次,lazy修饰的是一个存储属性，而存放的是闭包,我想内部，应该进行了优化
-     
-
      */
-    
 
     @IBAction func test(sender: AnyObject) {
     }
@@ -51,7 +48,6 @@ class ViewController: UIViewController{
     }
     
     //storyBoard 跳转处理
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "goSec" {
@@ -65,17 +61,12 @@ class ViewController: UIViewController{
         
         setupUI()
         
-        
         // 好奇葩的for循环
         for _ in 0...10
         {
             self.dataArray.addObject("1")
-
         }
         print(self.dataArray)
-
-        
-
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -113,7 +104,6 @@ class ViewController: UIViewController{
          基类转换为 派生类 向下转型
          
          */
-        
         secVC.delegate  = self
         
         self.navigationController?.pushViewController(secVC, animated: true)

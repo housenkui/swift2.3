@@ -12,7 +12,7 @@ func XHPrint<N>(message: N, fileName: String = #file, methodName: String = #func
     
     #if DEBUG // 若是Debug模式下，则打印
         
-        print("\(fileName as NSString)\n方法名:\(methodName)\n行数:\(lineNumber)\n打印信息\(message)");
+        print("\(fileName)\n方法名:\(methodName)\n行数:\(lineNumber)\n打印信息\(message)");
     #endif
 }
 
@@ -235,7 +235,7 @@ class Man01:SKPerson01 {
     
     var address:String = ""
     //重写父类要求的初始化convenience修饰的方法，不需要添加override关键字
-    required  init(name: String, age:Int,weight:Double) {
+      required init(name: String, age:Int,weight:Double) {
         super.init(name: name)
     }
     func study() -> Void {

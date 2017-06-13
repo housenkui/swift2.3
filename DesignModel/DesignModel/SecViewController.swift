@@ -13,6 +13,7 @@ import UIKit
 @objc protocol SubViewControllerDelegate {
     
    optional  func back(str:String) ->Void
+    
 }
 
 class SecViewController: UIViewController {

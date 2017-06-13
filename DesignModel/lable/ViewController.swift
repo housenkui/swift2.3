@@ -48,6 +48,7 @@ class ViewController: UIViewController {
 //    }
     
     //传入字符串、字体、颜色      返回NSMutableAttributedString
+    
     private func appendColorStrWithString(str:String,font:CGFloat,color:UIColor) -> NSMutableAttributedString {
         var attributedString : NSMutableAttributedString
         let attStr = NSMutableAttributedString.init(string: str, attributes: [NSFontAttributeName : UIFont.systemFontOfSize(font),NSForegroundColorAttributeName:color])

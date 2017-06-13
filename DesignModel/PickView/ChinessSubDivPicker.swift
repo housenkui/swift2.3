@@ -28,11 +28,8 @@ public class ChinessSubDivPicker: UIPickerView ,UIPickerViewDelegate,UIPickerVie
             Province(name:provinceData.keys.first!,cities:provinceData.values.first!.map({ citiesData in
                 City(name:citiesData.keys.first!,districts:citiesData.values.first!)
             }))
-            
         }
-        
-        
-    
+
     }()
     private lazy var provinces:[String] = self.subDivisionsData.map({$0.name})
     
@@ -56,7 +53,7 @@ public class ChinessSubDivPicker: UIPickerView ,UIPickerViewDelegate,UIPickerVie
             }
         }
     }
-    
+
     //省
     struct Province {
         let name :String
@@ -65,7 +62,7 @@ public class ChinessSubDivPicker: UIPickerView ,UIPickerViewDelegate,UIPickerVie
     //市
     struct City {
         let name:String
-        let districts:[String]
+        let districts:[String]//区
     }
     public enum ChineseSubDivPickerType {
     

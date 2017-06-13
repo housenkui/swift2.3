@@ -25,7 +25,7 @@ class SubViewController: UIViewController {
     
     @IBAction func backBtnAct(sender: AnyObject) {
         
-        if  self.backClosure != nil {
+        if let _ =  self.backClosure  {
         
             if let tempString  = self.textField.text{
                 
@@ -77,63 +77,4 @@ class SubViewController: UIViewController {
     */
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

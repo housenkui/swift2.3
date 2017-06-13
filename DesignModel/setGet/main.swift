@@ -23,13 +23,11 @@ class People: NSObject {
             
             return nickName + " " + firstName + " " + lastName
         }
-        
     }
     
     //带有属性监视器的普通属性
     var age:Int = 0
     {
-     
         //我们需要在age属性变化前做点什么
         willSet
         {
