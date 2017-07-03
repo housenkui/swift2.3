@@ -165,15 +165,29 @@ let index:Int  = arr.indexOfObjectPassingTest { (obj:AnyObject, idx:Int, stop:Un
 print(index)
 
 
+func getCurrentTimeStrWithFormatter(formatter: String)->String {
+    
+    let dateformatter = NSDateFormatter()
+    dateformatter.dateFormat = formatter
+    let morelocationString = dateformatter.stringFromDate(NSDate())
+    return morelocationString
+}
 
 
+var stringYear = getCurrentTimeStrWithFormatter("YYYY")
 
+let currentYear = Int(stringYear)!
 
+print("currentYear = \(currentYear)")
 
+var array22 = NSMutableArray()
 
-
-
-
+for i in (1989...currentYear) {
+    
+    array22.addObject("\(i)")
+    
+}
+print("array22  =\(array22)")
 
 
 

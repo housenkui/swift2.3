@@ -120,13 +120,33 @@ print(str1[7,3])
 print(str1[7])
 
 
+var possibleNumber:String? = "123"
+possibleNumber  = nil//可选类型才能赋予nil,非可选类型，即一定有值的变量，不能赋予nil
+//let convertedNumber = Int(possibleNumber!)
+//print("convertedNumber  =\(convertedNumber)")
+var possibleNumber01 = "sbjh"
+
+//下面这个表达式一定是true
+if possibleNumber01 != nil{
+    
+}
+var convertedNumber01 = Int(possibleNumber01)
+print("convertedNumber  =\(convertedNumber01)")
+
+
+convertedNumber01 = nil
+
+for character in possibleNumber01.characters {
+    
+    print(character)
+}
 
 
 
 
+possibleNumber01.append("hhhr")
 
-
-
+print("possibleNumber01  =\(possibleNumber01)")
 
 
 

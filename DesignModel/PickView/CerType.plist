@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>证券从业人员资格证</string>
+	<string>银行从业人员资格证</string>
+	<string>基金从业人员资格证</string>
+	<string>期货从业人员资格证</string>
+	<string>保险销售从业人员资格证</string>
+	<string>经济师证书（金融专业）</string>
+	<string>会计从业资格证</string>
+	<string>法律职业资格证</string>
+	<string>AFP证书</string>
+	<string>CFP证书</string>
+	<string>CFA证书</string>
+	<string>FRM证书</string>
+	<string>CIIA证书</string>
+	<string>CPA证书</string>
+	<string>其他相关证书</string>
+</array>
+</plist>

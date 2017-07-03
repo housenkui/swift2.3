@@ -18,33 +18,46 @@ func swapTwoValue<T>( a:inout T, _ b:inout T)  {
     a = b
     b = temp
 }
-class CanPrintBase<T>{
-    
-    func PrintType(output:T) -> Void {
-        
-    }
-}
 
-//面对Interface,也就是Swift里面的Protocol,需要使用associatedType关键字来定义泛型
+var someInt = 3
+var anotherInt = 107
 
-protocol CanPrint {
-    
-    associatedtype E
-    
-    func PrintType(E:inout) {
-    
-       print("fe")
-    }
-}
-//那要怎么去实现这个接口呢？
-class TypePrinter0:CanPrint {
-    typealias E = String
-    
-    func PrintType(output: E) {
-        
-        print(type(of:output))
-    }
-}
+swap(&someInt, &anotherInt)
+
+print("someInt = \(someInt)\n  anotherInt= \(anotherInt)\n")
+
+var someString = "hello"
+var anotherString = "world"
+swap(&someString, &anotherString)
+
+print("someString = \(someString)\n anotherString= \(anotherString)")
+//class CanPrintBase<T>{
+//    
+//    func PrintType(output:T) -> Void {
+//        
+//    }
+//}
+//
+////面对Interface,也就是Swift里面的Protocol,需要使用associatedType关键字来定义泛型
+//
+//protocol CanPrint {
+//    
+//    associatedtype E
+//    
+//    func PrintType(E:inout) {
+//    
+//       print("fe")
+//    }
+//}
+////那要怎么去实现这个接口呢？
+//class TypePrinter0:CanPrint {
+//    typealias E = String
+//    
+//    func PrintType(output: E) {
+//        
+//        print(type(of:output))
+//    }
+//}
 
 
 

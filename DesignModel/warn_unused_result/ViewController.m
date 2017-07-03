@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+- (IBAction)act:(id)sender;
 @end
 
 @implementation ViewController
@@ -40,6 +41,8 @@
 }
 
 
+- (IBAction)act:(id)sender {
+}
 @end
 
 

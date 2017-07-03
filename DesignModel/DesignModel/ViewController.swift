@@ -59,6 +59,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let aa = AA()
         setupUI()
         
         // 好奇葩的for循环
